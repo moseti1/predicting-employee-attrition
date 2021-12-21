@@ -9,6 +9,8 @@ The tools used in this project are typical python data science tools. They can b
 
 
 
+
+
 ## Dataset
 The provided dataset is the employee attrition dataset provided by Hash Analytics.
 The project is designed to be dataset independent so if there is a dataset that is more interesting or relevant to your work, you are welcome to use it to complete the project.
