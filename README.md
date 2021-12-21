@@ -17,7 +17,12 @@ The project is designed to be dataset independent so if there is a dataset that 
 ## Project Description
 
 The aim of this project is to analyze and predict how likely employees are to leave a company. This can be fueled by a number of factors like `salary`, `working hours`, `satistifaction level` , `evaluation` among many more. 
-To understand these factor we explore our data using data sciece techniques such as visulization, feature selection, prediction and other.
+
+To understand these factors we explore our data using data sciece techniques such as visulization, feature selection, prediction and other.
 
 
 ## Results 
+
+By visualizing `dept` and `Attrition` columns we see that most of the employees who left are from the `sales` department. Below is the bar chart.
+
+![]('img/department_bar_chart.png')
