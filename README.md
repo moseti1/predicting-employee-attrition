@@ -5,6 +5,13 @@ This project employs the use of data science to to analyze and make predictions 
 
 ## Project Set Up and Installation
 
+This will simplify much of the installation needed to get started.
+
+
+For local development, you will need to setup a jupyter lab instance.
+* Follow the [jupyter install](https://jupyter.org/install.html) link for best practices to install and start a jupyter lab instance.
+* If you have a python virtual environment already installed you can just `pip` install it.
+
 The tools used in this project are typical python data science tools. They can be install by python packaging manager (`pip`). [more info!](https://pypi.org/project/pip/)
 
 
