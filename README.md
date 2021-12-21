@@ -33,4 +33,4 @@ To understand these factors we explore our data using data sciece techniques suc
 By visualizing `dept` and `Attrition` columns we see that most of the employees who left are from the `sales` department. Below is the bar chart.
 
 
-![](https://raw.githubusercontent.com/moseti1/udc-img-dog-classification/main/img/department_bar_chart.png')
+![](https://raw.githubusercontent.com/moseti1/predicting-employee-attrition/main/img/department_bar_chart.png')
