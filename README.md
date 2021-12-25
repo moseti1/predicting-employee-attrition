@@ -5,16 +5,11 @@ This project employs the use of data science to to analyze and make predictions 
 
 ## Project Set Up and Installation
 
-This will simplify much of the installation needed to get started.
-
-
-For local development, you will need to setup a jupyter lab instance.
-* Follow the [jupyter install](https://jupyter.org/install.html) link for best practices to install and start a jupyter lab instance.
-* If you have a python virtual environment already installed you can just `pip` install it.
-
 The tools used in this project are typical python data science tools. They can be install by python packaging manager (`pip`). [more info!](https://pypi.org/project/pip/)
 
-
+```
+pip install jupyterlab
+```
 
 
 
@@ -34,5 +29,9 @@ To understand these factors we explore our data using data sciece techniques suc
 
 By visualizing `dept` and `Attrition` columns we see that most of the employees who left are from the `sales` department. Below is the bar chart.
 
+<<<<<<< HEAD
 
 ![](https://raw.githubusercontent.com/moseti1/predicting-employee-attrition/main/img/department_bar_chart.png')
+=======
+![]('img/department_bar_chart.png')
+>>>>>>> 2036c02 (added code for dashboard)
