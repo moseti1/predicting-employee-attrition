@@ -118,7 +118,7 @@ def bar_plot(full_data):
     plt.title('Turn over frequency for Department')
     plt.xlabel('Department')
     plt.ylabel('Frequency of Turnover')
-    plt.show()
+    #plt.show()
     #plt.savefig('img/department_bar_chart')
     
 
@@ -244,7 +244,7 @@ logreg= logreg.fit(X_train, y_train)
 
 
 
-print('Logistic regression accuracy: {:.3f}'.format(accuracy_score(y_test, logreg.predict(X_test))))
+# print('Logistic regression accuracy: {:.3f}'.format(accuracy_score(y_test, logreg.predict(X_test))))
 
 
 
@@ -262,9 +262,10 @@ modelRf.fit(X_train,y_train)
 test_pred = modelRf.predict(X_test)
 
 #test the accuracy 
-print('Random Forest Accuracy: {:.3f}'.format(accuracy_score(y_test, modelRf.predict(X_test))))
+#print('Random Forest Accuracy: {:.3f}'.format(accuracy_score(y_test, modelRf.predict(X_test))))
 
-
+def score_accuracy(model,X_test,y_test):
+    accuracy_score(y_test,model.predict(X_test))
 
 
 # create a support vector machine
@@ -274,7 +275,7 @@ from sklearn.svm import SVC
 svc = SVC()
 
 
-svc.fit(X_train, y_train)
+svc = svc.fit(X_train, y_train)
 
 
 
@@ -319,7 +320,7 @@ def random_forest_graph(X_test,y_pred,y_test):
 
 
 
-print(classification_report(y_test, svc.predict(X_test)))
+#cls_report= classification_report(y_test, svc.predict(X_test))
 
 
 

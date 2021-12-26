@@ -11,6 +11,7 @@ import plotly.express as px
 
 
 
+
 from sklearn.feature_selection import RFE
 from sklearn.linear_model import LogisticRegression
 from sklearn import model_selection
@@ -25,7 +26,7 @@ from sklearn.metrics import accuracy_score
 
 import attrition
 
-from attrition import (load_data, bar_plot, salary_bar,roc_curve, attrition_prop,hist,dummify_category, logreg,modelRf,feature_importance_percentage,feature_importances_graph,heatmap_svc,random_forest_graph,cls_report,random_cls,svc,test_pred,full_data)
+from attrition import (load_data, bar_plot, salary_bar,roc_curve, attrition_prop,hist,dummify_category, logreg,modelRf,feature_importance_percentage,feature_importances_graph,heatmap_svc,random_forest_graph,cls_report,random_cls,svc,test_pred,full_data,score_accuracy)
 
 #load data 
 #Existing employee data in sheet1 into data1
@@ -47,8 +48,7 @@ X=[i for i in full_data_vars if i not in y]
 # merge the data
 full_data = pd.concat([data1,data2])
 
-
-
+full_data = pd.DataFrame(full_data)
 
 
 
@@ -59,7 +59,7 @@ full_data = pd.concat([data1,data2])
 
 #turnover_bar = bar_plot(full_data)
 
-#salary_bar = salary_bar(full_data)
+salary_bar = go.Bar(x=full_data['salary'], y=full_data['Attrition'])
 
 # split data
 #X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.3,random_state=0)
@@ -73,14 +73,33 @@ colors = {
 }
 
 # build the dashboard
-app.layout = html.Div(children=[ 
+app.layout = html.Div(style={'backgroundColor': colors['background']},children=[ 
                        
     
-    html.H1(children='A Web Application For Employee Atrrition.', style={
+    html.H1(children='A Dashboard Application For Employee Atrrition in Company X', style={
         'textAlign': 'center',
         'color': colors['text']
-    })]
-)
+    }), 
+    dcc.Graph(
+        id='salary-bar',
+        figure= {
+           'data': [salary_bar],
+            'layout': {
+                'plot_bgcolor': colors['background'],
+                'paper_bgcolor': colors['background'],
+                'font': {
+                    'color': colors['text']
+                }
+            }
+        }
+    )
+])
+
+                      
+                      
+               
+                      
+
                        
 
 
